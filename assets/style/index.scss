@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 917px;
+    height: 375px;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0.5em;
+    display: flex;
+    gap: 35px;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+
+    .highlight {
+        color: #aa5cdb;
+        font-size: 2rem;
+    }
+}
+
+.card_stats_text {
+    margin-top: 35px;
+    display: flex;
+    gap: 65px;
+
+    span {
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-size: .71rem;
+    }
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 300;
+    font-size: .9375rem;
+}
+
+span {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+img {
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 425px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    main {
+        align-items: unset;
+    }
+
+    .card {
+        width: 350px;
+        height: 795px;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    .card_text {
+        text-align: center;
+    }
+
+    .card_stats_text {
+        flex-direction: column;
+        gap: 35px;
+
+        p {
+            font-size: .75rem;
+        }
+    }
+
+    img {
+        border-top-right-radius: 0.5em;
+        border-top-left-radius: 0.5em;
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+}
